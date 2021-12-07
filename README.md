@@ -12,7 +12,7 @@ $ cd onnx-tensorflow
 $ pip install -e .
 ```
 
-## quick start
+## training
 
 
 ```
@@ -28,6 +28,8 @@ $ tflite_convert --saved_model_dir=pbfile --output_file=mnist_cnn.tflite
 - mnist_cnn.pt
 - mnist_cnn.onnx
 - mnist_cnn.tflite
+
+## testing
 
 推論を実行しよう。
 
