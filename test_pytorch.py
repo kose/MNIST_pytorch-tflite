@@ -44,7 +44,6 @@ def test(model, device, dataset):
     data, labels_ground_truth = testloader.__iter__().next()
     
     labels_ground_truth = labels_ground_truth.numpy().copy()
-    # _pred = model.forward(data).numpy().copy()
 
     _pred = model(data).numpy().copy()
     labels_pred = np.argmax(_pred, axis=1)
