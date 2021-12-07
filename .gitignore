@@ -1,0 +1,7 @@
+data
+
+mnist_cnn.onnx
+mnist_cnn.pt
+mnist_cnn.tflite
+onnx-tensorflow
+pbfile
