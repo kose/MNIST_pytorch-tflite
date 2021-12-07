@@ -64,7 +64,15 @@ $ python test_tflite.py
 ```
 
 推論結果少し違いますね。
- 
+
+# NCHW形式 VS. NHWC形式 問題
+
+ここでは PyTorch で学習した NCHW形式モデルをそのまま tflite に変換して、
+推論時も NCHW形式で使ってる。
+
+ということでで良いんですよね？？
+
+
 # Reference
 
 - https://github.com/pytorch/examples/tree/master/mnist ... main.py -> train.py 改造
