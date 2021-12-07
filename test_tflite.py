@@ -42,9 +42,9 @@ def main():
 
         # truth
         labels_ground_truth = np.append(labels_ground_truth, label.numpy())
-        
+
         # set input tensor
-        interpreter.set_tensor(input_details[0]['index'], data)
+        interpreter.set_tensor(input_details[0]['index'], data.numpy())
 
         # run
         interpreter.invoke()
