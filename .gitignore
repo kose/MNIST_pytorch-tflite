@@ -5,3 +5,6 @@ mnist_cnn.pt
 mnist_cnn.tflite
 onnx-tensorflow
 pbfile
+
+cpp/build
+cpp/tensorflow_src
