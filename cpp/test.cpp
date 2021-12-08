@@ -80,14 +80,10 @@ int main()
   // predict
   //
   float mnistdata[28 * 28];
-    
   std::ifstream ifs(DATA_CSV);
   std::string line;
-  int n = 0;
+  int confusion_matrix[10][10] = {0};
 
-  int total = 0;
-  int correct = 0;
-    
   while(getline(ifs, line)) {
 
     std::vector<std::string> strvec = split(line, ',');
@@ -113,15 +109,16 @@ int main()
     // Get data from output tensor
     float* probs = interpreter->typed_output_tensor<float>(0);
 
-    if (gt == argmax(probs)) {
-      correct++;
-    }
-
-    total++;
+    confusion_matrix[gt][argmax(probs)]++;
   }
 
-  std::cerr << "count: " << correct << " / " << total << std::endl;
-  std::cerr << "accuracy: " << (float)correct / (float)total << std::endl;
-    
+  for (int i = 0; i < 10; i++) {
+    for (int j = 0; j < 10; j++) {
+      printf("%4d ", confusion_matrix[i][j]);
+    }
+    printf("\n");
+  }
+  printf("\n");
+  
   return EXIT_SUCCESS;
 }
