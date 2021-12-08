@@ -18,7 +18,7 @@ $ pip install -e .
 ```
 $ python train.py --save-onnx --save-model
 
-$ onnx-tf convert -i mnist_cnn.onnx -i pbfile
+$ onnx-tf convert -i mnist_cnn.onnx -o pbfile
 
 $ tflite_convert --saved_model_dir=pbfile --output_file=mnist_cnn.tflite
 ```
