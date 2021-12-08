@@ -45,6 +45,8 @@ INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
    2    2    0    3    7    8    0    2    4  981 
 ```
 
+python版と推論結果は同一になってます。
+
 # Reference
 
 - [CMakeでTensorFlowLiteをビルドする](https://www.tensorflow.org/lite/guide/build_cmake)
