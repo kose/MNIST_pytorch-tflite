@@ -12,9 +12,9 @@
 ```
 $ conda update --all
 
-$ conda install --yes conda=4.10.3
+$ conda install conda=4.10.3
 
-$ conda install --yes numpy scikit-learn \
+$ conda install numpy scikit-learn \
 	   tensorflow==2.6.2 tensorflow-probability \
 	   pytorch torchvision
 
