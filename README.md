@@ -9,19 +9,19 @@
 ## condaの場合
 
 ```
-$ conda update --yes --all
+$ conda update --all
 
-$ conda install --yes numpy
-$ conda install --yes scikit-learn
+$ conda install numpy
+$ conda install scikit-learn
 
-$ conda install --yes conda==4.10.3
-$ conda install --yes tensorflow==2.6.2
+$ conda install conda==4.10.3
+$ conda install tensorflow==2.6.2
 
-$ conda install --yes conda==4.10.3
-$ conda install --yes tensorflow-probability
+$ conda install conda==4.10.3
+$ conda install tensorflow-probability
 
-$ conda install --yes pytorch
-$ conda install --yes torchvision
+$ conda install pytorch
+$ conda install torchvision
 
 $ git clone https://github.com/onnx/onnx-tensorflow.git
 $ cd onnx-tensorflow
