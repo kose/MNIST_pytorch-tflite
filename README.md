@@ -2,8 +2,9 @@
 
 ## environment
 
-- Intel macOS (M1 ではonnx-tensorflowで失敗する。変換はできないけどPythoh, C++の推論は動く）
-- [Miniforge](https://github.com/conda-forge/miniforge)  (Recommended)
+- Intel macOS 
+- M1 Mac ではonnx-tensorflowで失敗する。変換はできないけどPythoh, C++の推論は動く。
+- [Miniforge](https://github.com/conda-forge/miniforge)
 
 
 ## condaの場合
@@ -11,17 +12,11 @@
 ```
 $ conda update --all
 
-$ conda install numpy
-$ conda install scikit-learn
+$ conda install --yes conda=4.10.3
 
-$ conda install conda==4.10.3
-$ conda install tensorflow==2.6.2
-
-$ conda install conda==4.10.3
-$ conda install tensorflow-probability
-
-$ conda install pytorch
-$ conda install torchvision
+$ conda install --yes numpy scikit-learn \
+	   tensorflow==2.6.2 tensorflow-probability \
+	   pytorch torchvision
 
 $ git clone https://github.com/onnx/onnx-tensorflow.git
 $ cd onnx-tensorflow
@@ -38,7 +33,6 @@ $ pip install -e .
 ```
 
 ## training
-
 
 ```
 $ python train.py --save-onnx --save-model
