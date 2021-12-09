@@ -2,8 +2,33 @@
 
 ## environment
 
+- Intel macOS (M1 ではonnx-tensorflowで失敗する。変換はできないけどPythoh, C++の推論は動く）
 - [Miniforge](https://github.com/conda-forge/miniforge)  (Recommended)
 
+
+## condaの場合
+
+```
+$ conda update --yes --all
+
+$ conda install --yes numpy
+$ conda install --yes scikit-learn
+
+$ conda install --yes conda==4.10.3
+$ conda install --yes tensorflow==2.6.2
+
+$ conda install --yes conda==4.10.3
+$ conda install --yes tensorflow-probability
+
+$ conda install --yes pytorch
+$ conda install --yes torchvision
+
+$ git clone https://github.com/onnx/onnx-tensorflow.git
+$ cd onnx-tensorflow
+$ pip install -e .
+```
+
+## pipの場合
 ```
 $ pip install -r requirements.txt
 
@@ -51,19 +76,19 @@ $ python test_pytorch.py
 ```
 $ python test_tflite.py
 
-[[ 972    1    0    0    0    2    2    1    2    0]
- [   0 1132    1    1    0    1    0    0    0    0]
- [   0    5 1013    4    1    0    1    6    2    0]
- [   0    0    1  995    0    6    0    7    1    0]
- [   1    0    1    0  967    0    3    0    2    8]
- [   1    0    0    3    0  883    3    1    1    0]
- [   2    4    0    0    1    8  942    0    1    0]
- [   0    2    9    0    0    1    0 1011    1    4]
- [   1    0    4    2    2    5    2    5  949    4]
- [   2    2    0    3    7    8    0    2    4  981]]
+[[ 976    0    1    0    0    0    1    1    1    0]
+ [   0 1134    0    1    0    0    0    0    0    0]
+ [   1    1 1024    0    0    0    1    5    0    0]
+ [   0    0    2 1004    0    3    0    0    1    0]
+ [   0    0    0    0  977    0    1    0    1    3]
+ [   0    0    0    3    0  888    1    0    0    0]
+ [   4    2    0    0    1    3  947    0    1    0]
+ [   0    2    5    1    0    0    0 1017    1    2]
+ [   2    1    2    1    1    1    0    1  961    4]
+ [   0    1    0    1    5    5    0    3    2  992]]
 ```
 
-推論結果少し違いますね。
+同じ推論結果です
 
 # NCHW形式 VS. NHWC形式 問題
 
