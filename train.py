@@ -136,7 +136,7 @@ def main():
 
     if args.save_onnx:
         input = torch.randn((1, 1, 28, 28))
-        torch.onnx.export(model, input, "mnist_cnn.onnx", verbose=False,
+        torch.onnx.export(model.to("cpu"), input, "mnist_cnn.onnx", verbose=False,
                           input_names=['MNIST'], output_names=['digit'])
         
 if __name__ == '__main__':
